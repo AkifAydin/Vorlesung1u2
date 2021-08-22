@@ -11,6 +11,7 @@ public class PointerWithDelimeter {
     }
 
     public static void main(String[] args) {
+        //int newc = (int c1);
         reactrash();
     }
 }
