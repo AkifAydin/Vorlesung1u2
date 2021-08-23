@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Typkonversion {
     public static void main(String[] args) {
         short s1 = 4;
@@ -51,28 +55,64 @@ public class Typkonversion {
         f5 = f5 -2;
         short s5=4;
         short s6=6;
-        s5 = s5 + s6;
+        s5 = (short) (s5 + s6);
         char c8 = 5;
         char c9 = 9;
-        c8 = c8 + c9;
-        byte b1 = 3;
         byte b2 = 15;
-        b1 = b1 / b2;
-        char c1 = 'a';
-        char c2 = 'b';
-        c1 = c1 - c2;
-        int i; i = s2 + s1;
-        i = c1 - c2;
+        b1 = (byte) (b1 / b2);
         i = b1 / b2;
-        float f = 14.7f;
         Math.pow(f,f);
         f = i + s1 + b1;
-        f = c1 / s2;
-        f = Math.pow(f,f);
-        f = d / c1;
-        double d;
+        f = (float) Math.pow(f,f);
         d = f - c2;
-        d = Math.pow(f,f);;
+        d = Math.pow(f,f);
+        int i3 = 3;
+        i3 = (int) (i3 +l); //coercion wenn zwei verschiedene Datentypen miteinander addiert werden, wird das größere Datentyp gecastet als ergebnis bereitgestellt.
         System.out.println(d1);
+        //ue-2-8
+        System.out.println("ue-2-8");
+        int i9;
+        i9 = Integer.MAX_VALUE;
+        System.out.println(i9);  //max = 2147483647
+        i9 = i9 * 2;
+        System.out.println(i9);  //verdopplung -2   (Das Ergebnis ist -2)
+        // ue-2-9
+        System.out.println("ue-2-9");
+        byte b9;
+        b9 = Byte.MAX_VALUE;
+        System.out.println(Byte.MAX_VALUE*2);  //Ergebnis wird als Int ausgegenem
+        //b9 = b9 * 2;   //coercion Wertebereich wird verlassen und kleiner als Int, daher casting in Int-
+        String a,x,c;
+        a = "Onur";
+        x = " Akif";
+        c = a+x;
+        System.out.println(c);
+        System.out.println("3" + 9);
+        System.out.println("3" + "9");
+        long l2 = 123455;
+        int i6 = 2132;
+        i6 = (int) l2;
+        long ll = Long.MIN_VALUE;
+        ll = Integer.MIN_VALUE;
+        System.out.println(ll);
+        int ii = Integer.MAX_VALUE;
+        ii = (int)ll;
+        System.out.println(ii);
+        System.out.println("Autoboxing und Autounboxing");
+        Integer integer = 4;
+        int z = integer;
+        System.out.println(z);
+        List<Integer> v = new ArrayList<Integer>();
+        v.add(3); // autoboxing
+        int y = v.get(0); //autounboxing
+        System.out.println(y);
+        Double d5 = new Double(4) + new Double(17);
+        System.out.println(d5);
+        d = new Double(4) + new Byte( (byte)17 );
+        d = new Double(4) + 17;
+        d = 17;
+        //Double d = new Integer(17);
+        Random rand1 = new Random();
+        System.out.println("rand1.nextBoolean() " + rand1.nextBoolean());
     }
 }
